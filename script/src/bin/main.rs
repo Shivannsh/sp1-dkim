@@ -85,7 +85,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("receiver: {:?}", receiver);
 
         let amount= proof.public_values.read::<String>();
-
         println!("amount: {:?}", amount);
 
         let sender= proof.public_values.read::<String>();
@@ -96,30 +95,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         proof.save("proof.json").expect("saving proof failed");
         return Ok(());
-    // }
-    // else {
-    //     let (output, report) = client.execute(ELF, stdin).run().unwrap();
-    //     println!("Program executed successfully.");
-    //     println!("Raw output: {:?}", output);
-
-    //     let decoded = match PublicValuesStruct::abi_decode(output.as_slice(), true) {
-    //         Ok(decoded) => decoded,
-    //         Err(e) => {
-    //             println!("Decoding error: {:?}", e);
-    //             return Ok(());
-    //         }
-    //     };
-
-    //     let PublicValuesStruct {from_domain_hash, public_key_hash, result, receiver,amount,sender} = decoded;
-        
-    //     println!("from_domain_hash: {:?}", from_domain_hash);
-    //     println!("public_key_hash: {:?}", public_key_hash);
-    //     println!("result: {:?}", result);
-    //     println!("receiver: {:?}", receiver);
-    //     println!("amount: {:?}", amount);
-    //     println!("sender: {:?}", sender);
-
-    // }
+ 
     }
 
     println!("Invalid from_domain.");
