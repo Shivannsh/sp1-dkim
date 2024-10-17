@@ -65,39 +65,61 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         let client = ProverClient::new();
 
-        if args[1]=="--prove" {
+        // if args[1]=="--prove" {
        
         let (pk, vk) = client.setup(ELF);
-        let proof = client.prove(&pk, stdin).run()?;
+        let mut proof = client.prove(&pk, stdin).run()?;
 
+        println!("Proof generated successfully.");
+
+        let domain_hash= proof.public_values.read::<u8>();
+        println!("from_domain_hash: {:?}", domain_hash);
+
+        let public_key_hash= proof.public_values.read::<u8>();
+        println!("public_key_hash: {:?}", public_key_hash);
+
+        let result= proof.public_values.read::<bool>();
+        println!("result: {:?}", result);
+
+        let receiver= proof.public_values.read::<String>();
+        println!("receiver: {:?}", receiver);
+
+        let amount= proof.public_values.read::<String>();
+
+        println!("amount: {:?}", amount);
+
+        let sender= proof.public_values.read::<String>();
+        println!("sender: {:?}", sender);
+        
 
         client.verify(&proof, &vk).expect("verification failed");
 
         proof.save("proof.json").expect("saving proof failed");
         return Ok(());
-    }
-    else {
-        let (output, report) = client.execute(ELF, stdin).run().unwrap();
-        println!("Program executed successfully.");
+    // }
+    // else {
+    //     let (output, report) = client.execute(ELF, stdin).run().unwrap();
+    //     println!("Program executed successfully.");
+    //     println!("Raw output: {:?}", output);
 
-        let decoded = PublicValuesStruct::abi_decode(output.as_slice(), true).unwrap();
-        let PublicValuesStruct {
-            from_domain_hash,
-            public_key_hash,
-            result,
-            receiver,
-            amount,
-            sender,
-        } = decoded;
+    //     let decoded = match PublicValuesStruct::abi_decode(output.as_slice(), true) {
+    //         Ok(decoded) => decoded,
+    //         Err(e) => {
+    //             println!("Decoding error: {:?}", e);
+    //             return Ok(());
+    //         }
+    //     };
+
+    //     let PublicValuesStruct {from_domain_hash, public_key_hash, result, receiver,amount,sender} = decoded;
         
-        println!("from_domain_hash: {:?}", from_domain_hash);
-        println!("public_key_hash: {:?}", public_key_hash);
-        println!("result: {:?}", result);
-        println!("receiver: {:?}", receiver);
-        println!("amount: {:?}", amount);
-        println!("sender: {:?}", sender);
+    //     println!("from_domain_hash: {:?}", from_domain_hash);
+    //     println!("public_key_hash: {:?}", public_key_hash);
+    //     println!("result: {:?}", result);
+    //     println!("receiver: {:?}", receiver);
+    //     println!("amount: {:?}", amount);
+    //     println!("sender: {:?}", sender);
 
-    }
+    // }
     }
 
     println!("Invalid from_domain.");
