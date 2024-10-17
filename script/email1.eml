@@ -1,0 +1,430 @@
+Delivered-To: whoisgautxm@gmail.com
+Received: by 2002:a59:93cf:0:b0:49d:8eb2:2404 with SMTP id b15csp764308vqh;
+        Wed, 16 Oct 2024 08:17:46 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHmp08I05KfsY74eu00mKS533DMxbgIFC4zqpoyfWkrWRGOmvGZ/maXEvEPhx/econlqjJJ
+X-Received: by 2002:a17:90a:a881:b0:2e1:89aa:65b7 with SMTP id 98e67ed59e1d1-2e3ab7f85b1mr5417667a91.9.1729091866251;
+        Wed, 16 Oct 2024 08:17:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729091866; cv=none;
+        d=google.com; s=arc-20240605;
+        b=asXwG9z0s0Pzi23OL0sTvxsdZTT+add3qAOyrN/sjhSqOoF1hKwnZKy2UMQmt4VDLm
+         NCKjt+jYrfW4UqtwaP2loz+UZWy3A30IkUFtVfriJLKw+mRpb9AUBJR6Ld3v6fg8DmBL
+         Qt8xVeOiYPr8Vu/4RAjGBrPMNghrDockIV6JPG2BuDm3QFqIG4OcMK00Yloq56mwr8XU
+         M+IH//xIVBkWLU1tnTRFmzpFM4LtnNWyqbKrj7wAWDauBFzeQMt+0gENmbPw4DRBz9gY
+         CFqbF106as/TL0XfQzCw+mAO9l6pfshSWXvPRDy0oymYwkbnJMeX4/lPxr5VY2PAOlEv
+         gkUQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:list-unsubscribe-post:feedback-id:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :dkim-signature:dkim-signature;
+        bh=oh2AaHVxCuNMh1l1uo0wCi9qGEYTair0PzbBVxRhy3s=;
+        fh=RNT6SibEIMdsfcuqLPFbLejmxrLB1NKSAqJzbIgsK3U=;
+        b=fONXZCC3DpRAmokQ1ktVirUjPC0/bxSpSQzVcgCVTdb+L//LFOxhzmPIrhmRZEPOZW
+         odSnvM52ZSyU8Fc8rHjTHowIZHTmoXz6+m95Dt7bVG7ubG7pRT8pbrl4QU7dqSY8wFp6
+         GDmVUYSBYHCflIzfvw+5G3GFHRZKnjLYAunXha4QxpkhAOT+Jvj3elbhVeu0EFQr9+1V
+         8YvdHWjhivQY78b/BTcWS9npupiZOwxq8/cS4brMoNn5RuYi+zbzKKxM69MRdE7siza+
+         HUjqu4WNtsSXYhCgNZo1+mHDonKq+U2Cf3VtPwHDWTf3y2mAUleglTSV/B/eYIGrtx24
+         W0sg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@phonepe.com header.s=pepipost header.b=KAljwX4C;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=P3M2TL1f;
+       spf=pass (google.com: domain of 17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.72.96 as permitted sender) smtp.mailfrom=17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=phonepe.com
+Return-Path: <17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com>
+Received: from d72-96-smtp-out-drin.ncdelivery07.com (d72-96-smtp-out-drin.ncdelivery07.com. [175.158.72.96])
+        by mx.google.com with ESMTPS id 98e67ed59e1d1-2e392f605efsi4443230a91.170.2024.10.16.08.17.45
+        for <whoisgautxm@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 16 Oct 2024 08:17:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.72.96 as permitted sender) client-ip=175.158.72.96;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@phonepe.com header.s=pepipost header.b=KAljwX4C;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=P3M2TL1f;
+       spf=pass (google.com: domain of 17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.72.96 as permitted sender) smtp.mailfrom=17290170967563698-130916-1-gmail.com@delivery.mailer.phonepe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=phonepe.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=phonepe.com; s=pepipost;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=oh2AaHVxCuNMh1l1uo0wCi9qGEYTair0PzbBVxRhy3s=;
+	b=KAljwX4CaZffLsKx00L3NAyzU5NB+AHQiKr0p5XMZDaRlvfZQgbTm/GDt5EXP/Cz/oWfPqcJMHEuU
+	 DAhJ4xQ9Y1fzHLVolKz2REpQxhjOAE6wMpmwL+ujbwf9lzjRRMtwNQV076pPNknPmkVSnxCngLssrm
+	 uIyrJltY1f/W/OyY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=env.etransmail.com; s=fnc;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=oh2AaHVxCuNMh1l1uo0wCi9qGEYTair0PzbBVxRhy3s=;
+	b=P3M2TL1fFPF1b8Ur7hS9zi3Li8BAncHnIMB0zgB4C5FYG4mXEmM5+EyLRk8cskx4vZXoaxvu05IIv
+	 cJg5DvUsPnulekJk7172QRAkFKZqrtKH8YseDyvYsbZCgKCllAQ0jyt/rGyzdA7gq2ZsjpXhQmo/yS
+	 dasjbztHT2wUSHSA=
+To: <whoisgautxm@gmail.com>
+From: =?UTF-8?B?UGhvbmVQZQ==?= <noreply@phonepe.com>
+Subject: =?UTF-8?B?U2VudCDigrkgMSB0byAgUk9CSU4gS1VNQVIg?=
+Message-Id: <mihrzv17290170967563698@phonepe.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_172909186543412540"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://unsub-api.netcorecloud.net/YHNMJN?id=130916=NE1WBAAJXwUDTEMYEhMXGBAYRhQSEBkSQxESFxcTExFBEUYVExlGFBUQQxgSExcYEAgaQ1pfUEEEUEdDT15zVgxQD1kdWglZSQFUCgsDBg8AAVADBwYKBFoJTl9DR0NCWx5JQF1KE1YYURNRHF1STFNXFFFRXFZHBx9cUkMcankvfCx7DFACSEMD>, <mailto:17290170967563698-130916-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Feedback-Id: 130916:202410:1:falconide
+X-Dkim-Options: s=pepipost;d=phonepe.com
+X-Fncid: 130916-17290170967563698-0
+X-Abuse-Reports-To: abuse@pepipost.com
+X-Injtime: 1729091865
+X-Traffic-Type: 130916-2
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Date: Wed, 16 Oct 2024 20:47:45 +0530
+
+This is a multi-part message in MIME format.
+
+--_----------=_172909186543412540
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+      =C2=A0                                                               =
+                     Oct 16, 2024                                          =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+   Paid to                                                                 =
+                  ROBIN KUMAR                                              =
+                                                                           =
+                                                                         =
+=E2=82=B9 1                                                                =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+       Txn. ID                                                             =
+             :                                                             =
+             T2410162047405190055113                                       =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                Txn. status                                =
+                                          :                                =
+                                                                           =
+    Successful                                                             =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                               Debited from                =
+                                                          :                =
+                                                                           =
+                                                         XXXXXX3518        =
+                                                                           =
+                            State Bank Of India                            =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                           Bank Ref. No.                   =
+                                                       :                   =
+                                                       780739092704        =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                               Message     =
+                                                                     :     =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                               Hi User                  You can share your =
+transaction confirmation receipt or download a statement of your transactio=
+ns from here                  Please note: You need to have the latest vers=
+ion of the PhonePe app to download statements.                  If you have=
+ not made this transaction or notice any error please contact us at support=
+.phonepe.com                  Cheers! Team PhonePe                         =
+                                                                           =
+                                                                           =
+    About us                                                               =
+Policy                                                               Terms =
+                                                      =C2=A0               =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                  Important=
+ Note: PhonePe or its merchant partners never ask for your PhonePe password=
+, bank details or MPIN over email/phone. Please do not share your PhonePe p=
+assword or MPIN with anyone. For any questions write to support.phonepe.com=
+                                                                           =
+                                                        =C2=A0
+=20=
+=
+
+--_----------=_172909186543412540
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html lang=3D"en"> <head>  <meta http-equiv=3D"content-type" content=3D"tex=
+t/html; charset=3DUTF-8"> <meta http-equiv=3D"X-UA-Compatible" content=3D"I=
+E=3Dedge"> <meta name=3D"description" content=3D"PhonePe.com revolutionizin=
+g payments by building India=E2=80=99s Payments App to provide a cashless a=
+nd a seamless payment experience"> <meta name=3D"keywords" content=3D"Phone=
+ pe, Phonepe, UPI, Cashless payments, India"> <meta name=3D"viewport" conte=
+nt=3D"width=3Ddevice-width, initial-scale=3D1.0"> <meta property=3D"og:titl=
+e" content=3D"PhonePe India's Payments APP - PhonePe.com"> <meta property=
+=3D"og:url" content=3D"https://www.phonepe.com/"> <meta property=3D"og:desc=
+ription" content=3D"PhonePe.com revolutionizing payments by building India=
+=E2=80=99s Payments App to provide a cashless and a seamless payment experi=
+ence">  <title>PhonePe India's Payments APP</title> </head> <body style=3D"=
+margin:0;padding:0;">  <!-- Container --> <table style=3D"border-collapse:c=
+ollapse;table-layout:fixed;margin:0 auto;border-spacing:0;padding:0;height:=
+100%!important;width:100%!important;font-weight:normal;color:#3e4152;font-f=
+amily:'roboto',Arial, Helvetica, sans-serif;font-size:14px;line-height:1.4;=
+" height=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"> <tr> <td style=3D"background:#ffffff;padding:16px 0;">      <table =
+style=3D"max-width:600px;margin:auto;border-spacing:0;background:#673AB7;pa=
+dding:4px;border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px=
+;-o-border-radius:16px;-webkit-border-radius:16px;overflow:hidden" align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">  =
+        <tr>     <td style=3D"border-collapse:collapse;">          <!-- Ema=
+il Holder -->     <table style=3D"margin:auto;border-spacing:0;background:w=
+hite;border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-b=
+order-radius:12px;-webkit-border-radius:12px;overflow:hidden;" align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">      =
+        <!-- Row 01 -->         <tr>         <td style=3D"border-collapse:c=
+ollapse;">                  <!-- Header -->         <table style=3D"border-=
+spacing:0;border-collapse:collapse" bgcolor=3D"#ffffff" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%">                      <tr>    =
+             <td style=3D"border-collapse:collapse; padding:16px 32px;" ali=
+gn=3D"left" valign=3D"middle">                                  <table styl=
+e=3D"border-spacing:0;border-collapse:collapse" bgcolor=3D"#ffffff" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">                 =
+    <tr>                     <!-- Pe Icon -->                     <td style=
+=3D"padding: 0;text-align:left;border-collapse:collapse;" width=3D"40" alig=
+n=3D"left" valign=3D"middle">                     <a href=3D"https://www.ph=
+onepe.com" target=3D"_blank" style=3D"text-decoration:none;color:#ffffff;ou=
+tline:0;outline:none;border:0;border:none;">                     <img src=
+=3D"http://images.phonepe.com/images/emailers/96/96/phonepe_logo.png" title=
+=3D"PhonePe" alt=3D"PhonePe" style=3D"margin:auto;text-align:center;border:=
+0;outline:none;text-decoration:none;min-height:40px" align=3D"middle" borde=
+r=3D"0" width=3D"40"/>                     </a>                     </td>  =
+                   <!-- End of Pe Icon -->                          <td wid=
+th=3D"16" align=3D"left" valign=3D"middle" style=3D"border-collapse:collaps=
+e;">&nbsp;</td>                                          <!-- Date / Time -=
+->                     <td style=3D"0;text-align:right;border-collapse:coll=
+apse;font-size:12px;font-family:'roboto',Arial, Helvetica, sans-serif;outli=
+ne:0;outline:none;border:0;border:none;" align=3D"right" valign=3D"middle">=
+                     Oct 16, 2024                     </td>                =
+     <!-- End of Date / Time -->                     </tr>                 =
+</table>                                  </td>             </tr>          =
+            </table>         <!-- End of Header -->         </td>         <=
+/tr>         <!-- End of Row 01 -->                  <!-- Transaction Detai=
+ls Wrapper -->         <tr>         <td style=3D"border-collapse:collapse;p=
+adding:0 16px">             <!-- Transaction Details -->             <table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"background:#f7f9fa;padding:16px;border-radius:8px;-moz-bord=
+er-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;-webkit-border-rad=
+ius:8px;overflow:hidden;">                                  <!-- User name =
+/ Amount -->                             <tr>                              =
+   <td align=3D"left" valign=3D"middle" style=3D"border-collapse:collapse;p=
+adding-bottom:16px;border-bottom:1px solid #eaeaed;">                      =
+               <table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%">                                     <tr>      =
+                               <td align=3D"left" valign=3D"top" style=3D"b=
+order-collapse:collapse;text-transform:capitalize;">                       =
+                  <span style=3D"border-collapse:collapse;width:100%;text-w=
+rap:normal;display:block;">Paid to</span>                                  =
+       <span style=3D"border-collapse:collapse;font-size:16px;font-weight:5=
+00;width:100%;text-wrap:normal;display:block">                             =
+             ROBIN KUMAR                                          </span>  =
+                                   </td>                                   =
+  <td width=3D"32" align=3D"left" valign=3D"middle" style=3D"border-collaps=
+e:collapse;"></td>                                     <td align=3D"right" =
+valign=3D"middle" style=3D"border-collapse:collapse;font-size:20px;font-wei=
+ght:500;">                                         &#8377; 1               =
+                      </td>                                     </tr>      =
+                               </table>                                 </t=
+d>                             </tr>                             <!-- End o=
+f User name / Amount -->                                  <!-- Transaction =
+ID -->                             <tr>                                 <td=
+ align=3D"left" valign=3D"middle" style=3D"border-collapse:collapse;padding=
+:8px 0;border-bottom:1px solid #eaeaed;font-size:12px;">                   =
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%">                                     <tr>   =
+                                  <td width=3D"28%" align=3D"left" valign=
+=3D"top" style=3D"border-collapse:collapse;text-transform:capitalize;text-w=
+rap:normal;">                                     Txn. ID                  =
+                   </td>                                     <td width=3D"1=
+6" align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;font-wei=
+ght:normal;text-wrap:normal;">:</td>                                     <t=
+d align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;font-weig=
+ht:normal;text-wrap:normal;">                                     T24101620=
+47405190055113                                     </td>                   =
+                  </tr>                                     </table>       =
+                          </td>                             </tr>          =
+                   <!-- End of Transaction ID -->                          =
+        <!-- Transaction Status -->                             <tr>       =
+                          <td align=3D"left" valign=3D"middle" style=3D"bor=
+der-collapse:collapse;padding:8px 0;border-bottom:1px solid #eaeaed;font-si=
+ze:12px;">                                     <table align=3D"center" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">               =
+                      <tr>                                     <td width=3D=
+"28%" align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;text-=
+transform:capitalize;text-wrap:normal;">                                   =
+  Txn. status                                     </td>                    =
+                 <td width=3D"16" align=3D"left" valign=3D"top" style=3D"bo=
+rder-collapse:collapse;font-weight:normal;text-wrap:normal;">:</td>        =
+                             <!-- Success -->                              =
+       <td align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;=
+font-weight:normal;text-wrap:normal;font-size:16px;color:#5eaa46;">        =
+                             Successful                                    =
+ </td>                                     <!-- End of Success -->         =
+                            </tr>                                     </tab=
+le>                                 </td>                             </tr>=
+                             <!-- End of Transaction Status -->            =
+                      <!-- Transaction Type -->                            =
+ <tr>                                 <td align=3D"left" valign=3D"middle" =
+style=3D"border-collapse:collapse;padding:8px 0;border-bottom:1px solid #ea=
+eaed;font-size:12px;">                                     <table align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">   =
+                                  <tr>                                     =
+<td width=3D"28%" align=3D"left" valign=3D"top" style=3D"border-collapse:co=
+llapse;text-transform:capitalize;text-wrap:normal;">                       =
+              Debited from                                     </td>       =
+                              <td width=3D"16" align=3D"left" valign=3D"top=
+" style=3D"border-collapse:collapse;font-weight:normal;text-wrap:normal;">:=
+</td>                                     <!-- Bank Account -->            =
+                         <td align=3D"left" valign=3D"top" style=3D"border-=
+collapse:collapse;font-weight:normal;text-wrap:normal;font-size:12px;">    =
+                                 <span style=3D"border-collapse:collapse;fo=
+nt-size:16px;width:100%;text-wrap:normal;display:block;text-wrap:normal;"> =
+                                    XXXXXX3518                             =
+        </span>                                     <span style=3D"border-c=
+ollapse:collapse;width:100%;font-weight:normal;text-wrap:normal;display:blo=
+ck;text-wrap:normal;">                                     State Bank Of In=
+dia                                      </span>                           =
+          </td>                                     <!-- End of Bank Accoun=
+t -->                                     </tr>                            =
+         </table>                                 </td>                    =
+         </tr>                             <!-- End of Transaction Type -->=
+                                  <!-- Refrance Number -->                 =
+            <tr>                                 <td align=3D"left" valign=
+=3D"middle" style=3D"border-collapse:collapse;padding:8px 0;border-bottom:1=
+px solid #eaeaed;font-size:12px;">                                     <tab=
+le align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%">                                     <tr>                        =
+             <td width=3D"28%" align=3D"left" valign=3D"top" style=3D"borde=
+r-collapse:collapse;text-transform:capitalize;text-wrap:normal;">          =
+                           Bank Ref. No.                                   =
+  </td>                                     <td width=3D"16" align=3D"left"=
+ valign=3D"top" style=3D"border-collapse:collapse;font-weight:normal;text-w=
+rap:normal;">:</td>                                     <td align=3D"left" =
+valign=3D"top" style=3D"border-collapse:collapse;font-weight:normal;text-wr=
+ap:normal;">                                     780739092704              =
+                       </td>                                     </tr>     =
+                                </table>                                 </=
+td>                             </tr>                             <!-- End =
+of Refrance Number -->                                  <!-- Message -->   =
+                          <tr>                                 <td align=3D=
+"left" valign=3D"middle" style=3D"border-collapse:collapse;padding:8px 0 0;=
+font-size:12px;">                                     <table align=3D"cente=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">        =
+                             <tr>                                     <td w=
+idth=3D"28%" align=3D"left" valign=3D"top" style=3D"border-collapse:collaps=
+e;text-wrap:normal;">                                     Message          =
+                           </td>                                     <td wi=
+dth=3D"16" align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;=
+font-weight:normal;text-wrap:normal;">:</td>                               =
+      <td align=3D"left" valign=3D"top" style=3D"border-collapse:collapse;f=
+ont-weight:normal;text-wrap:normal;">                                      =
+                                     </td>                                 =
+    </tr>                                     </table>                     =
+            </td>                             </tr>                        =
+     <!-- End of Message -->                              </table>         =
+    <!-- End of Transaction Details -->         </td>         </tr>        =
+ <!-- End of Transaction Wrapper Details -->                            <!-=
+- Content -->         <tr>         <td style=3D"border-collapse:collapse;pa=
+dding:32px;background:#ffffff;font-family:'roboto',Arial, Helvetica, sans-s=
+erif;">         <p style=3D"padding:0;margin:0;">         Hi User         <=
+br/><br/>         You can share your transaction confirmation receipt or do=
+wnload a statement of your transactions from <a href=3D"https://phon.pe/his=
+tory" style=3D"color:#673ab7;" target=3D"_blank">here</a>         <br/><br/=
+>         Please note: You need to have the latest version of the PhonePe a=
+pp to download statements.         <br/><br/>         If you have not made =
+this transaction or notice any error please contact us at <a href=3D"https:=
+//support.phonepe.com" style=3D"color:#673ab7;" target=3D"_blank">support.p=
+honepe.com</a>         <br/><br/>         Cheers!<br/>Team PhonePe         =
+</p>         </td>         </tr>         <!-- End of Content -->           =
+       <!-- Footer -->         <tr>         <td style=3D"border-collapse:co=
+llapse;padding:16px 32px;border-top:1px solid #eaeaed;font-family:'roboto',=
+Arial, Helvetica, sans-serif;font-size:12px;">             <table align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">   =
+               <!-- Links -->                 <tr>                 <td alig=
+n=3D"left" valign=3D"middle" style=3D"border-collapse:collapse;font-weight:=
+normal;">                     <a href=3D"https://phonepe.com/en/about_us.ht=
+ml" style=3D"color:#673ab7;font-size:12px;padding:4px;height:24px;display:i=
+nline-block;text-transform:capitalize;outline:0;outline:none;border:0;borde=
+r:none;" target=3D"_blank">                     About us                   =
+  </a>                     <a href=3D"https://phonepe.com/en/policy.html" s=
+tyle=3D"color:#673ab7;font-size:12px;padding:4px;height:24px;display:inline=
+-block;text-transform:capitalize;outline:0;outline:none;border:0;border:non=
+e;" target=3D"_blank">                     Policy                     </a> =
+                    <a href=3D"https://phonepe.com/en/terms.html" style=3D"=
+color:#673ab7;font-size:12px;padding:4px;height:24px;display:inline-block;t=
+ext-transform:capitalize;outline:0;outline:none;border:0;border:none;" targ=
+et=3D"_blank">                     Terms                     </a>          =
+       </td>                 <td width=3D"16" align=3D"left" valign=3D"midd=
+le" style=3D"border-collapse:collapse;">&nbsp;</td>                 <td ali=
+gn=3D"right" valign=3D"middle" style=3D"border-collapse:collapse;">        =
+             <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">      =
+                   <tr>                         <td style=3D"border-collaps=
+e:collapse;">                             <a href=3D"http://bit.ly/2b5M9WB"=
+ target=3D"_blank" style=3D"font-size:0;border:0;outline:0;border:none;outl=
+ine:none;text-decoration:none;margin-right:4px;">                          =
+   <img width=3D"24" src=3D"http://images.phonepe.com/images/emailers/48/48=
+/ic_social_facebook.png" title=3D"Facebook" alt=3D"Facebook"/>             =
+                </a>                             <a href=3D"https://twitter=
+.com/PhonePe?lang=3Den" target=3D"_blank" style=3D"font-size:0;border:0;out=
+line:0;border:none;outline:none;text-decoration:none;margin-right:4px;">   =
+                          <img width=3D"24" src=3D"http://images.phonepe.co=
+m/images/emailers/48/48/ic_social_twitter.png" title=3D"Twitter" alt=3D"Twi=
+tter"/>                             </a>                         </td>     =
+                    </tr>                     </table>                 </td=
+>                 </tr>                 <!-- End of Links -->              =
+    <!-- Note -->                  <tr>                  <td style=3D"borde=
+r-collapse:collapse;font-weight:normal;padding-top:16px;font-style:italic;c=
+olor:#7e818c;" colspan=3D"3">                  Important Note: PhonePe or i=
+ts merchant partners never ask for your PhonePe password, bank details or M=
+PIN over email/phone. Please do not share your PhonePe password or MPIN wit=
+h anyone. For any questions write to <a href=3D"https://support.phonepe.com=
+" style=3D"color:#673ab7;" target=3D"_blank">support.phonepe.com</a>       =
+           </td>                  </tr>                 <!-- End of Note --=
+>              </table>         </td>         </tr>         <!-- End of Foo=
+ter -->          </table>     <!-- End of Email Holder -->          </td></=
+tr>     </table>  </td> </tr> </table> <!-- End of Container -->  <p>&nbsp;=
+<br></p>
+<img src=3D'http://distribution.mailer.phonepe.com/EBRSYAQFWTU?id=3D130916=
+=3DLk1WBAAJXwUDTEMYEhMXGBAYRhQSEBkSQxESFxcTExFBEUYVExlGFBUQQxgSExcYEAgaQ1pf=
+UEEEUEdDT15zVgxQD1kdWglZSQFUCgsDBg8AAVADBwYKBFoJTl9DR0MLTh4CXEBNFF1XRRdRXV0=
+ZVVFRClFAHklaDF9XR1IdUF4MHiN3YWo/dWR2NGxnDF5cTE5V' alt=3D'' /></body> </htm=
+l>=
+=
+
+--_----------=_172909186543412540--
+
