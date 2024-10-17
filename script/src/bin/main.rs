@@ -64,6 +64,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         stdin.write_vec(public_key.to_vec());
 
         let client = ProverClient::new();
+
+        if args[1]=="--prove" {
+       
         let (pk, vk) = client.setup(ELF);
         let proof = client.prove(&pk, stdin).run()?;
 
@@ -72,6 +75,29 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         proof.save("proof.json").expect("saving proof failed");
         return Ok(());
+    }
+    else {
+        let (output, report) = client.execute(ELF, stdin).run().unwrap();
+        println!("Program executed successfully.");
+
+        let decoded = PublicValuesStruct::abi_decode(output.as_slice(), true).unwrap();
+        let PublicValuesStruct {
+            from_domain_hash,
+            public_key_hash,
+            result,
+            receiver,
+            amount,
+            sender,
+        } = decoded;
+        
+        println!("from_domain_hash: {:?}", from_domain_hash);
+        println!("public_key_hash: {:?}", public_key_hash);
+        println!("result: {:?}", result);
+        println!("receiver: {:?}", receiver);
+        println!("amount: {:?}", amount);
+        println!("sender: {:?}", sender);
+
+    }
     }
 
     println!("Invalid from_domain.");
